@@ -1,6 +1,3 @@
-from flask import Flask, render_template
-
-
-app = Flask(__name__)
-
-from app import views
+from flask import Blueprint
+main = Blueprint('main', __name__)
+from . import views, error
