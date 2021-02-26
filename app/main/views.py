@@ -10,10 +10,11 @@ def index():
     View root page function that returns the index page and its data
     '''
 
+
     all_sources = get_news_source()
     all_news = get_everything()
     tech_stories = tech_headlines()
-    title = 'Falling Sky News'
+    title = 'News-Update'
 
     return render_template('index.html', sources = all_sources, others = all_news, tech = tech_stories, title = title)
 
@@ -24,6 +25,21 @@ def news_headlines(source):
     Function pulls/gets the top and breakng news
     '''
 
-    title = "Falling Sky News"
+    title = "New updates"
     news_headlines = get_news_headlines(source)
     return render_template('articles.html', title = title, headlines = news_headlines)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

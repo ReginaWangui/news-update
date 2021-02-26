@@ -11,7 +11,7 @@ tech_url = None
 
 def configure_request(app):
     global api_key, source_url, top_headlines_url, everything_url, tech_url
-    api_key = app.config['NEWS_API_KEY']
+    api_key = app.config['API_KEY']
     source_url = app.config['SOURCE_API_BASE_URL']
     top_headlines_url = app.config['TOP_HEADLINES_API_BASE_URL']
     everything_url = app.config['EVERYTHING_API_BASE_URL']
