@@ -7,10 +7,10 @@ class Config:
     '''
 
     API_KEY = os.environ.get('API_KEY')
-    SOURCE_API_BASE_URL = 'https://newsapi.org/v2/sources?apiKey={}'
-    EVERYTHING_API_BASE_URL = 'https://newsapi.org/v2/everything?domains=wsj.com&apikey={}'
-    TOP_HEADLINES_API_BASE_URL = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
-    TECH_API_BASE_URL = 'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey={}'
+    SOURCE_API_BASE_URL = 'https://newsapi.org/v2/sources?apiKey={}'.format(API_KEY)
+    EVERYTHING_API_BASE_URL = 'https://newsapi.org/v2/everything?domains=wsj.com&apikey={}'.format(API_KEY)
+    TOP_HEADLINES_API_BASE_URL = 'https://newsapi.org/v2/top-headlines?apiKey={}'.format(API_KEY)
+    TECH_API_BASE_URL = 'http://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey={}'.format(API_KEY)
 
 class ProdConfig(Config):
     '''
